@@ -78,13 +78,18 @@
     /* Tilted video box */
     .hero-video {
     position: absolute;
-    top: 180px;
-    right: 0px;
+    bottom: 30px;
+    right: 30px;
     width: 40%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.6);
     z-index: 0;
     border-radius: 5px;
     overflow: hidden;
+    transition: transform 0.3s ease;
+    }
+
+    .hero-video:hover {
+    transform: scale(1.3);
     }
 
     .hero-video video {
@@ -95,8 +100,9 @@
 
     /* CARD SECTION */
     .card-section {
-      
-      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       gap: 20px;
       padding: 50px 10%;
       background-color: #ffffff;
@@ -108,7 +114,7 @@
       border-radius: 8px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.08);
       padding: 20px;
-      width: 280px;
+      width: 30%;
       transition: transform 0.3s ease;
     }
     
@@ -118,7 +124,7 @@
       border-radius: 8px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.08);
       padding: 20px;
-      width: 280px;
+      width: 30%;
       transition: transform 0.3s ease;
     }
 
@@ -142,6 +148,57 @@
       color: #444;
     }
 
+    .form-section {
+      padding: 30px;
+      text-align: center;
+      background-color: #bdbdbd86;
+    }
+
+    .form-section form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .form-section label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-section button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .form-section button:hover {
+      background-color: #005599;
+    }
+
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+    }
+
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .hero-text {
@@ -161,6 +218,14 @@
         
         align-items: center;
         padding: 30px 5%;
+      }
+
+      .top-card {
+        width: 45%;
+      }
+
+      .card {
+        width: 45%;
       }
     }
   </style>
@@ -209,7 +274,38 @@
       <h3>Smart Interior</h3>
       <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
     </div>
+    <div class="card">
+      <h3>Hello World</h3>
+      <p>Hello World!</p>
+    </div>
+    <div class="card">
+      <h3>Mercedes Vision AVTR</h3>
+      <p>Mercedes Vision AVTR!</p>
+    </div>    
   </section>
 
+  <section class="form-section">
+    <h2>Request a Test Drive</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+  
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+  
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+  
+      <label for="notes">Notes (Optional):</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any special requests?"></textarea>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>Thank you!</p>
+  </footer>
+  
 </body>
 </html>
